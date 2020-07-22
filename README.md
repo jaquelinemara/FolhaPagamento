@@ -1,46 +1,46 @@
 # Folha de Pagamento
 
-Sistema para calcular a folha de pagamento de um funcionário a partir do número de horas trabalhadas e do valor/hora de trabalho
+System for calculating an employee's payroll based on the number of hours worked and the value/hour of work.
 
-## Conteúdo
+## Content
 
-* O sistema deverá apresentar um formulário na index para ler:
-    * Nome do funcionário
-    * Número de horas trabalhadas
-    * Valor da hora de trabalho
-* Após preenchimento do formulário, enviar os dados via POST para a página ‘pagamento.php’, que deverá receber os dados e validá-los:
-    * Não permitir que o formulário seja enviado em branco
-    * Se os dados foram enviados corretamente, o sistema deverá mostrar os dados enviados (nome do funcionário, valor da hora trabalhada e quantidade de horas trabalhadas). 
-* Além disso, o sistema deverá calcular e mostrar:
-    * Salário bruto
-    * Importo de Renda
+* The system must present a form in the index to read:
+    * Employee name
+    * Number of hours worked
+    * Hourly rate
+* After completing the form, send the data via POST to the ‘payment.php’ page, which should receive the data and validate it:
+    * Do not allow the form to be sent blank
+    * If the data was sent correctly, the system should show the data sent (name of employee, value of hours worked and number of hours worked).
+* In addition, the system should calculate and show:
+    * Salary without discounts (called "Salário bruto")
+    * Income Tax (called "Imposto de Renda")
     * INSS
     * FGTS
-    * Salário líquido
+    * Salary with discounts
     
-    **Considerações para os cálculos:**
+    **Considerations for calculations:**
     
-    *Imposto de Renda (valores fictícios)*
+    *Imposto de Renda (fictitious values)*
          
-    |  Salário Bruto  |Desconto (%)|
+    |  Salário Bruto  |Discount (%)|
     |---------------	|------------|
-    |Até R$ 1.372,81	|      0	   |
-    |Até R$ 1.372,81	|      15	   |
-    |Acima de 2.743,25|      27,5 	|      
+    |Until R$ 1.372,81	|      0	   |
+    |Until R$ 1.372,81	|      15	   |
+    |Up to 2.743,25|      27,5 	|      
 
-    *INSS (valores fictícios)*
+    *INSS (fictitious values)*
          
-    |           Salário Bruto       |  Desconto  |
+    |           Salário Bruto       |  Discount  |
     |-----------------------------	|------------|
-    |      Até R$ 868,29          	|      8 %   |
-    |De R$ 868,30 até R$ 1.447,14   |      9 %   |
-    |De R$ 1.447,15 até R$ 2.894,28 |      11 %  |
-    |     Acima de R$ 2.894,28      | R$ 318,37  |       
+    |      Until R$ 868,29          	|      8 %   |
+    | R$ 868,30 - R$ 1.447,14   |      9 %   |
+    | R$ 1.447,15 - R$ 2.894,28 |      11 %  |
+    |     Up to R$ 2.894,28      | R$ 318,37  |       
     
-    *FGTS (valores fictícios)*  
+    *FGTS (fictitious values)*  
     
-    Para calcular o FGTS basta extrair **8% do salário bruto**       
+    To calculate the FGTS simply extract **8% of "Salário Bruto"**       
     
-    *Salário líquido (valores fictícios)*          
+    *Salário Líquido (fictitious values)*          
     
-    Para calcular o salário líquido: **Salário bruto – IR – INSS**  
+    To calculate "Salário Líquido": **"Salário Bruto" – IR – INSS**  
